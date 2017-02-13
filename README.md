@@ -1,12 +1,12 @@
-# Kcal-Restaurants-of-the-Week
+# Kcal-Lunch-of-the-Week
 This program is for a challenge in order to apply for an internship.
 
 Sorry in advance, I work better if I have fun, so let's start Step 1.
 
 ### Step 1 : Loading inspiration :
-Epic badass music : [Cowabunga]
+Epic badass music : [Kowabunga]
 
-[Cowabunga]: <https://www.youtube.com/watch?v=LfL5x2NfJ6g>
+[Kowabunga]: <https://www.youtube.com/watch?v=LfL5x2NfJ6g>
 
 ### Step 2 : Technology selection :
 I chose **android**, in order to make a real application and not just a script.
@@ -35,3 +35,5 @@ Cool free vectors without attribution :
 * salad : https://pixabay.com/fr/salade-l%C3%A9gumes-repas-en-bonne-sant%C3%A9-575436/ 
 * Pasta : https://pixabay.com/fr/p%C3%A2tes-spaghetti-italien-bol-576417/ 
 * Kebab : https://pixabay.com/fr/taco-alimentaire-mexique-tortilla-576390/ 
+
+### Step 5 : Think the algo & look at what exists : 
