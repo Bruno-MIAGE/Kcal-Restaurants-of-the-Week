@@ -20,13 +20,14 @@ Spiritual part :
 Logical part :
 * Make a restaurant selection algorithm
 * (opt) Add other restaurants
+* (opt) Categorize food type and select category
 * (opt) Save data
 
 ### Step 4 : Design the App on paper & find some resources : 
 Cool text : 
 * http://patorjk.com/software/taag/#p=display&f=Isometric1&t=Bruno%0AVeraldi
 
-Cool Android resources
+Cool Android resources :
 * https://github.com/wasabeef/awesome-android-ui
 
 Cool free vectors without attribution :
@@ -36,4 +37,7 @@ Cool free vectors without attribution :
 * Pasta : https://pixabay.com/fr/p%C3%A2tes-spaghetti-italien-bol-576417/ 
 * Kebab : https://pixabay.com/fr/taco-alimentaire-mexique-tortilla-576390/ 
 
-### Step 5 : Think the algo & look at what exists : 
+### Step 5 : Think the algo & look at what exists :
+What exists :
+* Subset sum
+* knapsack
