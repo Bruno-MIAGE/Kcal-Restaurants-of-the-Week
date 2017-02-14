@@ -3,6 +3,7 @@ package fr.com.kcal_lunches_of_the_week;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.HashSet;
 import java.util.List;
 
 /*
@@ -55,44 +56,57 @@ public class MainActivity extends AppCompatActivity {
     private Double chaiseKcal = 488.0;
     private Double monjulKcal = 168.0;
 
+    private Double givenNumberOfKcal = 0.0;
+    private Integer nbLunch = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // ENREGISTREMENT DU JEU DE DEMONSTRATION DANS LA BDD
-        Restaurant restauKebab = new Restaurant(kebabKcal, kebab);
-        Restaurant restauLegume = new Restaurant(legumeKcal, legume);
-        Restaurant restauBigmac = new Restaurant(bigmacKcal, bigmac);
-        Restaurant restauPasta = new Restaurant(pastaKcal, pasta);
-        Restaurant restauJaja = new Restaurant(jajaKcal, jaja);
-        Restaurant restauPhilosophes = new Restaurant(philosophesKcal, philosophes);
-        Restaurant restauChaise = new Restaurant(chaiseKcal, chaise);
-        Restaurant restauMonjul = new Restaurant(monjulKcal, monjul);
-
-        restauKebab.save();
-        restauLegume.save();
-        restauBigmac.save();
-        restauPasta.save();
-        restauJaja.save();
-        restauPhilosophes.save();
-        restauChaise.save();
-        restauMonjul.save();
-
-        // On récupère la liste des restaurants enregistrés
+        // On récupère la liste des restaurants enregistrés et on vérifie si la liste est vide
         List<Restaurant> restaurants = Restaurant.listAll(Restaurant.class);
 
-        for(Restaurant r : restaurants){
-            System.out.println("Test : " + r.getDescription() + " - " + r.getCalories());
+        if(restaurants.isEmpty()){
+            // ENREGISTREMENT DU JEU DE DEMONSTRATION DANS LA BDD
+            Restaurant restauKebab = new Restaurant(kebabKcal, kebab);
+            Restaurant restauLegume = new Restaurant(legumeKcal, legume);
+            Restaurant restauBigmac = new Restaurant(bigmacKcal, bigmac);
+            Restaurant restauPasta = new Restaurant(pastaKcal, pasta);
+            Restaurant restauJaja = new Restaurant(jajaKcal, jaja);
+            Restaurant restauPhilosophes = new Restaurant(philosophesKcal, philosophes);
+            Restaurant restauChaise = new Restaurant(chaiseKcal, chaise);
+            Restaurant restauMonjul = new Restaurant(monjulKcal, monjul);
+
+            restauKebab.save();
+            restauLegume.save();
+            restauBigmac.save();
+            restauPasta.save();
+            restauJaja.save();
+            restauPhilosophes.save();
+            restauChaise.save();
+            restauMonjul.save();
         }
 
+        // On récupère la liste des restaurants enregistrés
+        restaurants = Restaurant.listAll(Restaurant.class);
 
+        // ALGORITHME Subset sum :
+        // récupération des jeux de repas se rapprochant à plus ou moins 15% de la valeur donnée par l'utilisateur "givenNumberOfKcal"
 
+        // Liste des Résultats
+        final HashSet<List<Restaurant>> Resultats = new HashSet<>();
 
+        // On récupère les valeurs données par l'utilisateur
+        givenNumberOfKcal = 345.0;
+        nbLunch = 5;
 
-
-
-
+        subsetRestaurants(givenNumberOfKcal, nbLunch, Resultats, restaurants);
 
     }
+
+    public static void subsetRestaurants(double givenNumberOfKcal, Integer nbLunch, HashSet<List<Restaurant>> Resultats, List<Restaurant> restaurants){
+
+    }
+
 }
