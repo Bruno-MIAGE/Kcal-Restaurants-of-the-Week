@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.1"
     defaultConfig {
         applicationId "fr.com.kcal_lunches_of_the_week"
-        minSdkVersion 14
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -25,6 +25,8 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.1.1'
-    compile 'com.github.satyan:sugar:1.5'
+    compile 'com.github.satyan:sugar:1.5'                   // enregistrement en bdd sqlite easy
+    compile 'com.flaviofaria:kenburnsview:1.0.7'            // effet de transition sur image
+    compile 'com.rengwuxian.materialedittext:library:2.1.4' // input material design stylé
     testCompile 'junit:junit:4.12'
 }
