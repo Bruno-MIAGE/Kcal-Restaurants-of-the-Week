@@ -30,6 +30,14 @@ Cool text :
 Cool Android resources :
 * https://github.com/wasabeef/awesome-android-ui
 
+
+Cool free backgrounds without attribution: 
+* https://pixabay.com/fr/alimentaire-restauration-rapide-1283108/
+* https://www.pexels.com/photo/food-salad-restaurant-person-5317/
+* https://www.pexels.com/photo/half-sliced-kiwi-beside-half-sliced-lemon-139374/
+* https://www.pexels.com/photo/macro-photography-of-pile-of-3-cookie-230325/
+* https://www.pexels.com/photo/appetizer-dish-food-meal-175950/
+
 Cool free vectors without attribution :
 * Logo burger : https://pixabay.com/fr/burger-hamburger-restauration-rapide-297459/ 
 * bigmac : https://pixabay.com/fr/hamburger-cheeseburger-burger-576419/ 
