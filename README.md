@@ -41,3 +41,10 @@ Cool free vectors without attribution :
 What exists :
 * Subset sum
 * knapsack
+
+Algoritm that I'll use : **subset** **sum**
+
+### Step 6 : Start coding - initialize the project :
+For saving the data, allowing to add new ones, I'll use :
+* Sugar ORM, website : http://satyan.github.io/sugar/ , repository : https://github.com/satyan/sugar
+
