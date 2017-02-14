@@ -30,13 +30,13 @@ Cool text :
 Cool Android resources :
 * https://github.com/wasabeef/awesome-android-ui
 
-
 Cool free backgrounds without attribution: 
 * https://pixabay.com/fr/alimentaire-restauration-rapide-1283108/
 * https://www.pexels.com/photo/food-salad-restaurant-person-5317/
 * https://www.pexels.com/photo/half-sliced-kiwi-beside-half-sliced-lemon-139374/
 * https://www.pexels.com/photo/macro-photography-of-pile-of-3-cookie-230325/
 * https://www.pexels.com/photo/appetizer-dish-food-meal-175950/
+* https://www.pexels.com/photo/food-breakfast-fork-bagel-6492/
 
 Cool free vectors without attribution :
 * Logo burger : https://pixabay.com/fr/burger-hamburger-restauration-rapide-297459/ 
@@ -56,3 +56,8 @@ Algoritm that I'll use : **subset** **sum**
 For saving the data, allowing to add new ones, I'll use :
 * Sugar ORM, website : http://satyan.github.io/sugar/ , repository : https://github.com/satyan/sugar
 
+Material design :
+*  https://github.com/rengwuxian/MaterialEditText
+
+Picture animation :
+* https://github.com/flavioarfaria/KenBurnsView

@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="DATABASE"
-            android:value="kcalRestaurants65.db" />
+            android:value="kcalRestaurant.db" />
         <meta-data
             android:name="VERSION"
             android:value="2" />
