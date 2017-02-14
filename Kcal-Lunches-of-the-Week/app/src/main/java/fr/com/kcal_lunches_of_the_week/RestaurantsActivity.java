@@ -56,7 +56,6 @@ public class RestaurantsActivity extends AppCompatActivity {
             total = 0;
             theSolutionString.append("PLANNING N°" + i + "\n");
             for(Restaurant b : a){
-                System.out.println("skfjdgyhdi jhdfij ghdfjkj fhfkjgf f ghj gdhgd hdl");
                 if(k==0){
                     k=1;
                 }

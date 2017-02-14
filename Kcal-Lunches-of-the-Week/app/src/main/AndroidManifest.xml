@@ -7,7 +7,7 @@
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@drawable/logo"
-        android:label="@string/app_name"
+        android:label="Lunches of the Week"
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
