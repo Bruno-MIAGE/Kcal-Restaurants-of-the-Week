@@ -3,6 +3,7 @@ package fr.com.kcal_lunches_of_the_week;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -12,10 +13,18 @@ import java.util.List;
 public class RestaurantsActivity extends AppCompatActivity {
     private Double givenNumberOfKcal;
     private Integer nbLunch;
+    private Integer percent = 10;
+
+    private TextView theSolution;
+    private StringBuffer theSolutionString;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
+
+        theSolutionString = new StringBuffer();
+        theSolution = (TextView) findViewById(R.id.theSolution);
 
         // On récupère les valeurs données par l'utilisateur
         Intent intent = getIntent();
@@ -33,24 +42,45 @@ public class RestaurantsActivity extends AppCompatActivity {
 
         // On récupère la liste des restaurants enregistrés
         restaurants = Restaurant.listAll(Restaurant.class);
-        subsetRestaurants(givenNumberOfKcal, nbLunch, resultats, restaurants);
+        subsetRestaurants(givenNumberOfKcal, nbLunch, percent, resultats, restaurants);
 
         int total = 0 ;
+        int i = 1;
+        int j = 0;
+        int k = 0;
+        String tabJours[] = {"Lundi", "Mardi", "Mercredi" , "Jeudi", "Vendredi", "Samedi", "Dimanche", "Bonjour Martien :3"};
+
         Iterator<List<Restaurant>> it = resultats.iterator();
         while (it.hasNext()) {
             List<Restaurant> a = it.next();
             total = 0;
+            theSolutionString.append("PLANNING N°" + i + "\n");
             for(Restaurant b : a){
-                System.out.println("description : " + b.getDescription());
-                System.out.println("calories : " + b.getCalories());
+                System.out.println("skfjdgyhdi jhdfij ghdfjkj fhfkjgf f ghj gdhgd hdl");
+                if(k==0){
+                    k=1;
+                }
+                theSolutionString.append(tabJours[j] + " : \"" + b.getDescription() + "\"\n");
                 total+=b.getCalories();
+                if(j<7){
+                    j++;
+                }
             }
-            System.out.println("total : " + total);
-            System.out.println("---------------------------------");
+            theSolutionString.append("---\n");
+            theSolutionString.append("Total : " + total + "Kcal, contre " + givenNumberOfKcal +"Kcal demandées\n\n");
+            j=0;
+            i++;
         }
+        //System.out.println(theSolutionString);
+        if(k==0){
+            theSolutionString.append("PAS DE SOLUTIONS PASSEZ PLUS TARD");
+        }
+        theSolutionString.append("\n\n\n\n\n");
+        theSolution.setText(theSolutionString);
+
     }
 
-    public static void subsetRestaurants(double givenNumberOfKcal, double nbLunch, HashSet<List<Restaurant>> resultats, List<Restaurant> restaurants){
+    public static void subsetRestaurants(double givenNumberOfKcal, double nbLunch, Integer percent, HashSet<List<Restaurant>> resultats, List<Restaurant> restaurants){
         if (restaurants.size() == 0) {
             return;
         }
@@ -64,8 +94,8 @@ public class RestaurantsActivity extends AppCompatActivity {
         }
 
         // On vérifie si la somme s'approche de la valeur voulue à + ou - 15% et que l'on a bien le nombre de repas souhaité
-        if (kcalSum < givenNumberOfKcal + ((givenNumberOfKcal / 100) * 15)
-                && kcalSum > givenNumberOfKcal - ((givenNumberOfKcal / 100) * 15)
+        if (kcalSum < givenNumberOfKcal + ((givenNumberOfKcal / 100) * percent)
+                && kcalSum > givenNumberOfKcal - ((givenNumberOfKcal / 100) * percent)
                 && restaurants.size() == nbLunch ) {
             resultats.add(new ArrayList<>(restaurants));
         }
@@ -74,7 +104,7 @@ public class RestaurantsActivity extends AppCompatActivity {
         for (int i = 0; i < restaurants.size(); i++) {
             final List<Restaurant> subset = new ArrayList<>(restaurants);
             subset.remove(i);
-            subsetRestaurants(givenNumberOfKcal, nbLunch, resultats, subset);
+            subsetRestaurants(givenNumberOfKcal, nbLunch, percent, resultats, subset);
         }
     }
 }
