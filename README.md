@@ -1,4 +1,4 @@
-# Kcal-Lunch-of-the-Week
+# Kcal-Lunches-of-the-Week
 This program is for a challenge in order to apply for an internship.
 
 Sorry in advance, I work better if I have fun, so let's start Step 1.
